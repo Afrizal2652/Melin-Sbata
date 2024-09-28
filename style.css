@@ -7,13 +7,17 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: black;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* Membuat konten vertikal (header di atas, kolom di tengah) */
+    flex-direction: column;
+    background-image: url('image/bata.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     position: relative;
-    padding-top: 80px; /* Memberikan ruang untuk menu di atas */
+    padding-top: 80px;
 }
 
 body::before {
@@ -37,25 +41,24 @@ body::before {
     color: black;
     padding: 10px 20px;
     display: flex;
-    justify-content: space-between; /* Memisahkan judul dan menu */
+    justify-content: space-between;
     align-items: center;
-    box-sizing: border-box;
     position: fixed;
     top: 0;
     z-index: 1000;
-    height: 60px; /* Tinggi tetap untuk header */
+    height: 60px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .header h2 {
     margin: 0;
-    font-size: 20px; /* Ukuran font untuk judul */
+    font-size: 20px;
 }
 
 .menu {
     display: flex;
-    justify-content: flex-end; /* Posisi menu di kanan */
+    justify-content: flex-end;
     align-items: center;
-    width: auto; /* Menghilangkan lebar penuh pada menu */
 }
 
 .menu a {
@@ -93,38 +96,66 @@ body::before {
     max-width: 600px;
     text-align: center;
     z-index: 1;
-    margin-top: 20px; /* Jarak dari header */
+    margin-top: 20px;
 }
 
 .kolom h2 {
-    text-align: left;
-    margin-left: 20px;
+    margin-bottom: 15px;
 }
 
-.kolom ul {
-    font-size: 16px;
-    text-align: left;
-    margin-top: 12px;
-    margin-left: 20px;
-}
 .kolom p {
-    text-align: left;
+    font-size: 16px;
+    line-height: 1.6;
 }
+
 .Order {
-    text-align: center; /* Agar elemen Order berada di tengah */
-    margin-top: 20px; /* Jarak dari elemen sebelumnya */
+    text-align: center;
+    margin-top: 20px;
 }
 
 .order_brick {
-    background-color: black; /* Latar belakang hitam */
-    color: white; /* Warna teks putih */
-    padding: 10px 20px; /* Padding untuk memperbesar tombol */
-    text-decoration: none; /* Menghilangkan garis bawah pada link */
-    border-radius: 5px; /* Membuat sudut tombol melengkung */
-    font-weight: bold; /* Membuat teks tebal */
-    transition: background-color 0.3s ease; /* Animasi saat hover */
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 .order_brick:hover {
-    background-color: grey; /* Warna latar berubah saat hover */
+    background-color: grey;
+}
+
+/* Media Queries untuk tampilan mobile */
+@media only screen and (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .header h2 {
+        font-size: 18px;
+    }
+
+    .menu {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .menu a {
+        font-size: 14px;
+        margin: 5px 0;
+    }
+
+    .kolom {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .order_brick {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
 }
