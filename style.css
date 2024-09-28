@@ -104,6 +104,7 @@ body::before {
     font-size: 16px;
     line-height: 1.6;
 }
+
 .Order {
     text-align: center; /* Agar elemen Order berada di tengah */
     margin-top: 20px; /* Jarak dari elemen sebelumnya */
