@@ -122,3 +122,38 @@ body::before {
 .order_brick:hover {
     background-color: grey; /* Warna latar berubah saat hover */
 } 
+
+@media (max-width: 480px) {
+  /* Buat header dan menu navigasi full-width */
+  .header {
+    width: 100%;
+  }
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu a {
+    margin: 10px 0;
+  }
+  /* Buat elemen kolom dan order full-width */
+  .kolom {
+    width: 100%;
+  }
+  .Order {
+    width: 100%;
+  }
+}
+
+/* Untuk perangkat tablet dengan lebar maksimum 768px */
+@media (max-width: 768px) {
+  /* Sesuaikan ukuran font dan padding */
+  body {
+    font-size: 16px;
+  }
+  .kolom {
+    padding: 15px;
+  }
+  .Order {
+    padding: 15px;
+  }
+}
